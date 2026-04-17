@@ -1,0 +1,21 @@
+{
+  "holdings_sheet": {
+    "name": "Portfolio — Current Year",
+    "url": "https://docs.google.com/spreadsheets/d/1fme7KenYvt4-a-1NkTxajzRSmlam1zwx-3vDevbYX4U/edit?usp=sharing",
+    "spreadsheet_id": "1fme7KenYvt4-a-1NkTxajzRSmlam1zwx-3vDevbYX4U",
+    "tab": "Current Year",
+    "columns": {
+      "A": "Ticker",
+      "B": "Shares",
+      "C": "% of portfolio",
+      "D": "Current price",
+      "F": "$ position size"
+    },
+    "role": "Authoritative list of current holdings and sizing. Fetch live each run via the Google Sheets connector. Join to positions.json on ticker symbol.",
+    "access": "Requires Google Sheets MCP connector. If unavailable, fall back to positions.json and flag that sizing is missing."
+  },
+  "email": {
+    "to": "drew1618t@gmail.com",
+    "access": "Gmail MCP connector (create_draft / send via Gmail tools)."
+  }
+}
