@@ -12,7 +12,7 @@ Run a pre-market news triage for all positions in
 2. Read `investing/SKILL.md` in full for methodology.
 3. Fetch current holdings via the Google Sheets connector:
    - Spreadsheet ID: `1fme7KenYvt4-a-1NkTxajzRSmlam1zwx-3vDevbYX4U`
-   - Tab: `Current year`
+   - Tab: `Current Year`
    - Columns: A=Ticker, B=Shares, C=% of portfolio, D=Current price, F=$ position size
    - The sheet is the authoritative list of what is held and how much.
 4. Read `investing/positions.json` for thesis and `key_metrics_to_watch`
