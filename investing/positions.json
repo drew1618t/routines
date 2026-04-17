@@ -4,17 +4,6 @@
   "target_cagr": 0.27,
   "positions": [
     {
-      "ticker": "APP",
-      "name": "AppLovin",
-      "thesis": "Mobile ad-tech platform with AXON AI driving advertiser efficiency. Margin expansion story.",
-      "key_metrics_to_watch": [
-        "Software platform revenue growth",
-        "Adjusted EBITDA margin",
-        "Apps segment direction"
-      ],
-      "notes": ""
-    },
-    {
       "ticker": "ALAB",
       "name": "Astera Labs",
       "thesis": "Connectivity silicon for AI data centers. Leveraged to hyperscaler capex cycle.",
@@ -22,6 +11,17 @@
         "Revenue growth QoQ",
         "Customer concentration",
         "New product ramps"
+      ],
+      "notes": ""
+    },
+    {
+      "ticker": "APP",
+      "name": "AppLovin",
+      "thesis": "Mobile ad-tech platform with AXON AI driving advertiser efficiency. Margin expansion story.",
+      "key_metrics_to_watch": [
+        "Software platform revenue growth",
+        "Adjusted EBITDA margin",
+        "Apps segment direction"
       ],
       "notes": ""
     },
@@ -51,17 +51,6 @@
       "notes": "Fill in"
     },
     {
-      "ticker": "DAVE",
-      "name": "Dave Inc.",
-      "thesis": "Fintech / neobank. ExtraCash product economics.",
-      "key_metrics_to_watch": [
-        "Member growth",
-        "ARPU",
-        "Credit losses / provision"
-      ],
-      "notes": ""
-    },
-    {
       "ticker": "MU",
       "name": "Micron Technology",
       "thesis": "Memory cycle + HBM exposure to AI.",
@@ -84,44 +73,11 @@
       "notes": ""
     },
     {
-      "ticker": "HIVE",
-      "name": "HIVE Digital Technologies",
-      "thesis": "Bitcoin mining + HPC transition.",
-      "key_metrics_to_watch": [
-        "HPC revenue",
-        "Mining economics",
-        "Fleet efficiency"
-      ],
-      "notes": ""
-    },
-    {
-      "ticker": "BHST",
+      "ticker": "PTRN",
       "name": "",
       "thesis": "",
       "key_metrics_to_watch": [],
       "notes": "Fill in"
-    },
-    {
-      "ticker": "UPST",
-      "name": "Upstart Holdings",
-      "thesis": "AI credit underwriting. Recovery from rate cycle.",
-      "key_metrics_to_watch": [
-        "Loan originations",
-        "Conversion rate",
-        "Net interest income"
-      ],
-      "notes": ""
-    },
-    {
-      "ticker": "OGI",
-      "name": "Organigram Holdings",
-      "thesis": "Canadian cannabis with international expansion.",
-      "key_metrics_to_watch": [
-        "Net revenue growth",
-        "International revenue",
-        "Adjusted EBITDA"
-      ],
-      "notes": ""
     },
     {
       "ticker": "FIGR",
