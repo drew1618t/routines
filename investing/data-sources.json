@@ -2,6 +2,7 @@
   "holdings_sheet": {
     "name": "Portfolio — Current Year",
     "url": "https://docs.google.com/spreadsheets/d/1fme7KenYvt4-a-1NkTxajzRSmlam1zwx-3vDevbYX4U/edit?usp=sharing",
+    "csv_export_url": "https://docs.google.com/spreadsheets/d/1fme7KenYvt4-a-1NkTxajzRSmlam1zwx-3vDevbYX4U/export?format=csv",
     "spreadsheet_id": "1fme7KenYvt4-a-1NkTxajzRSmlam1zwx-3vDevbYX4U",
     "tab": "Current Year",
     "columns": {
@@ -11,8 +12,8 @@
       "D": "Current price",
       "F": "$ position size"
     },
-    "role": "Authoritative list of current holdings and sizing. Fetch live each run via the Google Sheets connector. Join to positions.json on ticker symbol.",
-    "access": "Requires Google Sheets MCP connector. If unavailable, fall back to positions.json and flag that sizing is missing."
+    "role": "Authoritative list of current holdings and sizing. Join to positions.json on ticker symbol.",
+    "access": "Sheet is shared 'anyone with the link — viewer'. Fetch the CSV via WebFetch on csv_export_url. docs.google.com is allowlisted in .claude/settings.json. If WebFetch fails, fall back to positions.json and flag that sizing is missing."
   },
   "email": {
     "to": "drew1618t@gmail.com",

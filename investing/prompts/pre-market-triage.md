@@ -10,12 +10,14 @@ Run a pre-market news triage for all positions in
 
 1. Read `shared/about-drew.md` for context and communication style.
 2. Read `investing/SKILL.md` in full for methodology.
-3. Fetch current holdings via the Google Sheets connector. Sheet
-   metadata (ID, tab, column map, URL) is stored in
-   `investing/data-sources.json` under `holdings_sheet`. The sheet is
-   the authoritative list of what is held and how much. If the Sheets
-   connector is unavailable, fall back to `positions.json` and flag at
-   the bottom of the email that sizing was not fetched.
+3. Fetch current holdings by WebFetch'ing `holdings_sheet.csv_export_url`
+   from `investing/data-sources.json`. The sheet is shared
+   "anyone with the link" and `docs.google.com` is allowlisted in
+   `.claude/settings.json`. Parse the CSV using the column map in
+   `holdings_sheet.columns`. The sheet is the authoritative list of
+   what is held and how much. If the fetch fails, fall back to
+   `positions.json` and flag at the bottom of the email that sizing
+   was not fetched.
 4. Read `investing/positions.json` for thesis and `key_metrics_to_watch`
    per ticker. Join on ticker symbol. If a ticker appears in the sheet but
    not in `positions.json`, still triage it — flag it at the bottom of the
