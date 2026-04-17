@@ -10,9 +10,9 @@ domain with its own SKILL.md and supporting files.
 
 ## Active routines
 
-| Name | Schedule | Prompt |
-|------|----------|--------|
-| pre-market-triage | Weekdays 09:00 BRT | investing/prompts/pre-market-triage.md |
+| Name | Schedule | Prompt | Connectors |
+|------|----------|--------|------------|
+| pre-market-triage | Weekdays 09:00 BRT | investing/prompts/pre-market-triage.md | Gmail, Google Sheets |
 
 ## Planned
 

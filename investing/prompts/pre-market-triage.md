@@ -10,28 +10,39 @@ Run a pre-market news triage for all positions in
 
 1. Read `shared/about-drew.md` for context and communication style.
 2. Read `investing/SKILL.md` in full for methodology.
-3. Read `investing/positions.json` for current holdings.
+3. Fetch current holdings via the Google Sheets connector:
+   - Spreadsheet ID: `1fme7KenYvt4-a-1NkTxajzRSmlam1zwx-3vDevbYX4U`
+   - Tab: `Current year`
+   - Columns: A=Ticker, B=Shares, C=% of portfolio, D=Current price, F=$ position size
+   - The sheet is the authoritative list of what is held and how much.
+4. Read `investing/positions.json` for thesis and `key_metrics_to_watch`
+   per ticker. Join on ticker symbol. If a ticker appears in the sheet but
+   not in `positions.json`, still triage it — flag it at the bottom of the
+   email under **Missing thesis metadata** so the JSON gets updated.
 
-For each position in positions.json:
+For each ticker from the sheet:
 
-4. Search the web for news from the last 18 hours related to:
+5. Search the web for news from the last 18 hours related to:
    - The ticker symbol
    - The company name
    - Direct competitors (if material news affects the sector)
-   - The specific metrics listed in key_metrics_to_watch
-5. Filter for material information only. Ignore routine analyst
+   - The specific metrics listed in key_metrics_to_watch (if present)
+6. Filter for material information only. Ignore routine analyst
    price target adjustments, options flow commentary, and generic
    market commentary.
-6. Rate each position URGENT / NOTABLE / QUIET per SKILL.md scheme.
+7. Rate each position URGENT / NOTABLE / QUIET per SKILL.md scheme.
+   Weight attention by position size — a 15% position getting URGENT news
+   matters more than a 2% position getting URGENT news. Reflect sizing in
+   suggested attention.
 
 Then:
 
-7. Check macro conditions:
+8. Check macro conditions:
    - US NASDAQ futures direction and magnitude
    - 10-year Treasury yield movement
    - Any Fed commentary or economic data overnight
    - Sector rotation signals affecting growth stocks
-8. Check for broad sector news affecting multiple positions
+9. Check for broad sector news affecting multiple positions
    (e.g., semiconductor export controls affecting MU, ALAB, CRDO;
    crypto price moves affecting IREN, HIVE; fintech regulatory
    action affecting DAVE, UPST).
@@ -49,7 +60,7 @@ Body structure:
 ## URGENT
 (Only include this section if there are URGENT items)
 
-### [TICKER] — [One-line summary]
+### [TICKER] ([X% of portfolio]) — [One-line summary]
 - What happened: [2-3 sentences]
 - Why it matters: [impact on thesis or watched metrics]
 - Suggested attention: [what to look at / decide today]
@@ -57,7 +68,7 @@ Body structure:
 
 ## NOTABLE
 
-### [TICKER] — [One-line summary]
+### [TICKER] ([X% of portfolio]) — [One-line summary]
 - [1-2 sentence summary]
 - Sources: [links]
 
@@ -72,6 +83,9 @@ Body structure:
 
 ## Cross-position themes
 [If sector news affects multiple positions, note here]
+
+## Missing thesis metadata
+[Tickers in the sheet that lack entries in positions.json — list only]
 ```
 
 ## Holiday handling

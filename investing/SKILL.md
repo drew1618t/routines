@@ -23,10 +23,14 @@ positions) in high-growth companies, target ~27% CAGR. Every position
 has a thesis and a short list of metrics that matter. News is relevant
 when it could move the thesis or move the watched metrics.
 
-## Core files (in investing/ directory)
+## Core data sources
 
-- `positions.json` — current holdings with per-position thesis and
-  `key_metrics_to_watch`. Use these to decide relevance.
+- **Google Sheet** — authoritative list of current holdings and sizing.
+  Fetched live via the Google Sheets connector each run. Drew edits this
+  whenever he trades.
+- `positions.json` — thesis and `key_metrics_to_watch` per ticker,
+  keyed by ticker symbol. Join with the sheet on ticker. Edited when a
+  thesis changes, not when sizing changes.
 - `exemplars/` — reference write-ups for tone and depth calibration
   (populated over time).
 
