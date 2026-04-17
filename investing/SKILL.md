@@ -25,12 +25,9 @@ when it could move the thesis or move the watched metrics.
 
 ## Core data sources
 
-- **Google Sheet** — authoritative list of current holdings and sizing.
-  Fetched live via the Google Sheets connector each run. Drew edits this
-  whenever he trades.
-- `positions.json` — thesis and `key_metrics_to_watch` per ticker,
-  keyed by ticker symbol. Join with the sheet on ticker. Edited when a
-  thesis changes, not when sizing changes.
+- `positions.json` — authoritative list of current holdings plus thesis
+  and `key_metrics_to_watch` per ticker. Drew edits this whenever he
+  trades or when a thesis changes.
 - `exemplars/` — reference write-ups for tone and depth calibration
   (populated over time).
 
